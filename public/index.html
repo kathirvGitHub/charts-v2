@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dashboard - Charts - v2</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+  <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <link rel="stylesheet" type="text/css" href="./lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="./css/keen-dashboards.css" />
+</head>
+
+<body class="application">
+
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="navbar-brand">JDE Dashboard Charts v2</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-8">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Exchange rate
+          </div>
+          <div class="chart-stage">
+            <div id="container_chart5" style="min-width: 310px; max-width: 800px; height: 350px; margin: 0 auto"></div>
+          </div>
+          <div class="chart-notes">
+            Sample data from site <a href='http://www.xe.com'>Xe</a>.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Drill down charts.
+          </div>
+          <div class="chart-stage">
+            <div id="container_chart6" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto"></div>
+          </div>
+          <div class="chart-notes">
+            Tested and tried multiple level drilldown, and they work!!!
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            JDE Item availability
+          </div>
+          <div class="chart-stage">
+            <div id="container_chart1" style="min-width: 310px; max-width: 800px; height: 350px; margin: 0 auto"></div>
+          </div>
+          <div class="chart-notes">
+            Sample data, we will make it realtime with Sockets!
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            A 3D chart
+          </div>
+          <div class="chart-stage">
+            <div id="container_chart2" style="min-width: 310px; max-width: 800px; height: 350px; margin: 0 auto"></div>
+          </div>
+          <div class="chart-notes">
+            A sample 3D chart
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Lets do some tickler
+          </div>
+          <div class="chart-stage">
+            <h5><span class="label label-default">Total Invoices : 10</span></h5>
+                    <h5><span class="label label-primary">Processed : 8</span></h5>
+                    <h5><span class="label label-success">Approved : 5</span></h5>
+                    <h5><span class="label label-info">Waiting : 2</span></h5>
+                    <h5><span class="label label-warning">Rejected : 1</span></h5>
+                    <h5><span class="label label-danger">Errored : 2</span></h5>         
+          </div>
+          <div class="chart-notes">
+            Have to link for auto updates!
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Lets try speed!
+          </div>
+          <div class="chart-stage">
+            <div id="container_chart3" style="width: 320px; height: 175px; float: left"></div>
+          </div>
+          <div class="chart-notes">
+            How I drive!
+          </div>
+
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Lets try speed!
+          </div>
+          <div class="chart-stage">
+            <div id="container_chart4" style="width: 320px; height: 175px; float: left"></div>
+          </div>
+          <div class="chart-notes">
+            How Jan drives!
+          </div>
+
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <img data-src="holder.js/100%x150/white">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <img data-src="holder.js/100%x150/white">
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <p class="small text-muted">Built with &#9829; by <a href="https://keen.io">Keen IO</a></p>
+
+  </div>
+
+  <script type="text/javascript" src="./lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="./lib/holderjs/holder.js"></script>
+  <script>
+    Holder.add_theme("white", { background: "#fff", foreground: "#a7a7a7", size: 10 });
+  </script>
+
+  <script type="text/javascript" src="./lib/keen-js/dist/keen.min.js"></script>
+  <script type="text/javascript" src="./js/meta.js"></script>
+  <script type="text/javascript" src="dashboard.js"></script>
+
+</body>
+
+</html>
